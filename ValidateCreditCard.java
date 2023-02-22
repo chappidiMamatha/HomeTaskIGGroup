@@ -8,11 +8,8 @@ public class ValidateCreditCard {
 		String cardNumber = "";
 		do {
 			Scanner userInput = new Scanner(System.in);
-
 			System.out.print("Enter your credit card number: ");
-
 			cardNumber = userInput.nextLine();
-
 			for (int i = 0; i < cardNumber.length(); i++) {
 				if(!Character.isDigit(cardNumber.charAt(i))) {
 					allInts = false;
@@ -23,8 +20,6 @@ public class ValidateCreditCard {
 				}
 			}
 		}while(!allInts);
-		
-		
 		validateCreditCardNumber(cardNumber);  
 	}
 	
@@ -53,5 +48,4 @@ public class ValidateCreditCard {
 	        System.out.println(cardNumber + " is an invalid credit card number");
 	    }
 	}
-
 }
